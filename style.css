@@ -1,0 +1,81 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	background: rgb(36,0,19);
+	background: linear-gradient(90deg, rgba(36,0,19,1) 0%, rgba(0,255,166,1) 0%, rgba(93,145,194,1) 25%, rgba(207,11,228,1) 100%);
+}
+
+h1 {
+	transition: 0.25s;
+}
+
+h1:hover {
+	transform: rotate(-360deg);
+}
+
+.container {
+	background: rgb(36,0,19);
+	background: linear-gradient(90deg, rgba(36,0,19,1) 0%, rgba(207,11,228,1) 0%, rgba(93,145,194,1) 71%, rgba(0,255,166,1) 100%);
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: 0;
+	border-radius: 30px;
+	transition: 0.25s;
+	cursor: default;
+}
+
+.container:hover {
+	transform: scale(1.1) translate(0px, 20px);
+}
+
+.container > h2 {
+	text-decoration: underline;
+}
+
+.container > ul > li {
+	list-style: decimal;
+	padding: 10px;
+	font-size: 20px;
+	text-align: left;
+}
+
+#userInput {
+	color: black;
+	background: white;
+	border-color: transparent;
+	padding: 5px;
+	border-radius: 15px;
+}
+
+#userInput:hover {
+
+}
+
+#enter {
+	margin: 10px;
+	color: white;
+	background-color: #123;
+	transition: 0.25s;
+	border: 5px solid #123;
+	border-radius: 30px;
+	align-self: right;
+}
+
+#enter:hover {
+	transform: scale(1.1);
+	border: 7px solid #123;
+}
+
+@keyframes strike {
+  from { text-decoration-color: transparent; }
+  to { text-decoration-color: auto; }
+}
+.strike {  
+  text-decoration: line-through;
+  animation: strike 0.75s linear;
+}
+
+::placeholder {
+	color: black;
+	opacity: 0.5;
+};
