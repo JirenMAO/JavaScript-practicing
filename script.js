@@ -1,10 +1,18 @@
 var enter = document.getElementById("enter");
 var userInput = document.getElementById("userInput");
 var list = document.querySelector("ul");
+var container = document.querySelector("div");
+
+console.log(container);
 
 enter.addEventListener("click", addAfterClick);
 
 userInput.addEventListener("keypress", addAfterKeypress);
+
+container.addEventListener("contextmenu", function() {
+		stopEvent(event);
+});
+
 
 list.addEventListener("click", function() {
 	var target=event.target;
@@ -14,7 +22,15 @@ list.addEventListener("click", function() {
 list.addEventListener("contextmenu", function() {
 	var target = event.target;
 	list.removeChild(target);
+	stopEvent(event);
 });
+
+function stopEvent(event){
+ if(event.preventDefault != undefined)
+  event.preventDefault();
+ if(event.stopPropagation != undefined)
+  event.stopPropagation();
+}
 
 function createListElement() {
 	var li = document.createElement("li");
